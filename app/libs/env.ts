@@ -70,8 +70,6 @@ function envall(path = "./.env") {
     const envConfig = parse(envFileContent);
     return envConfig;
 }
-
-export { envall, parse, read, save };
 export default {
     parse,
     save,

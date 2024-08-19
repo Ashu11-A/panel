@@ -17,12 +17,12 @@ let timeout: number | null = null;
  */
 new Kernel({
     identify: "Configuration",
-    priority:0,
+    priority: 0,
     after() {
-        watch(".env", function () {
+        watch(".env", () => {
             if (!timeout) {
                 Configuration.config();
-                timeout = setTimeout(function () {
+                timeout = setTimeout(() => {
                     timeout = null;
                 }, 100);
             }
@@ -35,11 +35,11 @@ new Kernel({
  */
 new Kernel({
     identify: "Database",
-    priority:1,
+    priority: 1,
     imports: {
         paths: ["models/**/*.ts"],
-        import(modul) {
-            const model = modul as { default:typeof Model }
+        import(module) {
+            const model = module as { default:typeof Model }
             if (Database.schemas) {
                 Database.schemas.push(model.default);
             }

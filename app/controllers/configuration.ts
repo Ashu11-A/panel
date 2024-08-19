@@ -24,6 +24,7 @@ export class Configuration<Schematic> {
     public value: Schematic;
     public readonly chk?: (value: string, def: Schematic) => Schematic;
     public readonly def: Schematic;
+
     constructor(opts: Constructor<Schematic>) {
         this.type = opts.type;
         this.env = opts.env;

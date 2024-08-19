@@ -20,6 +20,7 @@ export class Kernel<IKernel> {
     public readonly imports: KernelConstructor<IKernel>["imports"];
     public readonly after: KernelConstructor<IKernel>["after"];
     public readonly priority: number;
+
     constructor(options: KernelConstructor<IKernel>) {
         this.identify = options.identify;
         this.imports = options.imports;
@@ -29,11 +30,12 @@ export class Kernel<IKernel> {
     }
 
     public static async initialize() {
-        Kernel.kernels.sort((a, b) => a.priority - b.priority);
+        Kernel.kernels.sort((a, b) => a.priority - b.priority); // Faz a ordenação por prioridade, do menor para o maior
 
         await Promise.all(Kernel.kernels.map(async (kernel) => {
             if (kernel.imports) {
                 const paths = await Glob(kernel.imports.paths);
+
                 await Promise.all(paths.map(async (path) => {
                     const module = await Dimport(path);
                     kernel.imports?.import?.(module, kernel);
