@@ -20,12 +20,6 @@
       "@/*": [
         "./src/*"
       ],
-      "@ui/*": [
-        "./src/components/elements/ui/*"
-      ],
-      "@base/*":[
-        "./src/components/elements/base/*"
-      ]
     },
     /* Linting */
     "strict": true,
