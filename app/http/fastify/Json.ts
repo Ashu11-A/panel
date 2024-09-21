@@ -1,4 +1,4 @@
-import { FastifyJsonResponse, FastifyMetadataJson } from "@/types/fastify";
+import { FastifyJsonResponse, FastifyMetadataJson } from "@/types/fastify.js";
 import Plugin from "fastify-plugin";
 
 /**

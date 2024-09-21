@@ -1,11 +1,10 @@
-import { Configurations } from "@/config";
-import { Config as Configuration } from "@/controllers/config";
-import { Lang } from "@/controllers/langs";
-import { Console as IConsole } from "console";
+import { Configurations } from '@/config'
+import { Config as Configuration } from '@/controllers/config'
+import { Lang } from '@/controllers/langs'
 declare global {
-    var Config: typeof Configuration;
-    var Language:typeof Lang;
-    var __Configurations: Configurations;
+    var Config: typeof Configuration
+    var Language:typeof Lang
+    var __Configurations: Configurations
     interface Console {
         /**
          * Use namespace of translation

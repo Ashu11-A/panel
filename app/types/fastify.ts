@@ -16,7 +16,7 @@ export interface FastifyMetadataJson extends FastifyJsonResponse {
     };
 }
 
-declare module "fastify" {
+declare module 'fastify' {
     interface FastifyReply {
         /**
          * Sends a JSON response with the specified options.
@@ -26,4 +26,4 @@ declare module "fastify" {
     }
 }
 
-export {};
+export {}

@@ -1,6 +1,3 @@
-import { Configurations } from "@/config";
-import { Config as Configuration } from "@/controllers/config";
-
 export type ExtractObjectPath<T, Key extends keyof T> = Key extends string
     ? `${Key}`
     : never;

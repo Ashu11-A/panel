@@ -1,39 +1,35 @@
 {
-    "compilerOptions": {
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "target": "ESNext",
-        "lib": [
-            "ESNext",
-            "DOM"
-        ],
-        "module": "ESNext",
-        "rootDir": ".",
-        "moduleResolution": "Bundler",
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "./app/*"
-            ]
-        },
-        "declaration": true,
-        "resolveJsonModule": true,
-        "outDir": "./dist",
-        "removeComments": false,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "noImplicitAny": true,
-        "noUnusedLocals": false,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "skipLibCheck": true
+"compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+        "@/*": [
+            "./app/*"
+        ]
     },
-    "include": [
-        "app"
-    ],
-    "exclude": [
-        "node_modules",
-        "resources"
-    ]
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "strict": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "allowJs": true,
+
+    "outDir": "./dist",
+    "typeRoots": ["src/types/**/*.d.ts"]
+    },
+    "include": ["app"],
+    "exclude": ["node_modules", "dist", "resources"]
 }
+        
